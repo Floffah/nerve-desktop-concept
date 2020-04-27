@@ -1,0 +1,34 @@
+{
+  "name": "nerve-desktop-concept",
+  "version": "1.0.0",
+  "description": "A concept of what the N3RVE app could look like as a desktop app.",
+  "homepage": "https://github.com/Floffah/nerve-desktop-concept#readme",
+  "bugs": {
+    "url": "https://github.com/Floffah/nerve-desktop-concept/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Floffah/nerve-desktop-concept.git"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "author": "Floffah",
+  "main": "app/app.js",
+  "scripts": {
+    "test": "npx electron . --ud=./test --dev",
+    "build": "npx concurrently npm:sass npm:src",
+    "sass": "npx sass --watch assets/sass/styles.sass:assets/css/styles.css",
+    "src": "npx babel flow/ -- -d src/ --watch"
+  },
+  "dependencies": {
+    "lowdb": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-flow": "^7.9.0",
+    "electron": "^8.2.3",
+    "electron-builder": "^22.5.1",
+    "electron-debug": "^3.0.1",
+    "flow-bin": "^0.123.0"
+  }
+}
